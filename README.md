@@ -6,42 +6,47 @@
 
 <br>
 <b>Created By:</b> <br>
-Brea Chaney<br>
-Nathan Mead
+
+
+[Brea Chaney](https://github.com/brearenee)<br>
+[Nathan Mead](https://github.com/nmead1)
 
 
 
 <b>versions:</b> <br>
-JDK version 17.0.4.1<br>
-Springboot 2.7.3<br>
-Apache Maven 3.0.5<br>
-Docker version 20.10.17<br>
+-
+- JDK version 17.0.4.1
+- Springboot 2.7.3
+- Apache Maven 3.0.5
+- Docker version 20.10.17
+
 
 ### Steps To Run Locally:
 
 
 clone repository
 
-Install Docker if you have not already done so. 
+install Docker if you have not already done so. 
 	
 run command:
 
-    cd scripts ./start container
+ ```cd scripts ./start container```
 	
 run command in another terminal:
 
-	cd scripts ./attach-container
+```cd scripts ./attach-container```
 	
 run command in same terminal as above:
 
-    mvn clean install
+```mvn clean install```
 	 
-Run application using:
+Run application in same terminal using:
 
-     mvn spring-boot:run
+```mvn spring-boot:run```
 	
 
-The web application is accessible via browser at http://localhost:8080/
+The web application is accessible via browser at
+http://localhost:8080/
 
 ## Heroku
 also available via cloud at<br>
