@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "2bdbc281-e574-47c5-b905-5e81a62aff3b",
+		"name": "7dbs API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22974960"
+	},
+	"item": [
+		{
+			"name": "localhost:8080",
+			"item": [
+				{
+					"name": "Country",
+					"item": [
+						{
+							"name": "Create Country",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"countryCode\": \"ca\",\n    \"countryName\": \"Canada\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/countries/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"countries",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Countries",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/countries/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"countries",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find One Country",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/countries/:countryCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"countries",
+										":countryCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "ca"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Country",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"countryCode\": \"ca\",\n    \"countryName\": \"Canada Updated\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/countries/:countryCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"countries",
+										":countryCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "ca"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Country",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/countries/:countryCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"countries",
+										":countryCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "ca"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "City",
+					"item": [
+						{
+							"name": "Create City",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Parter\",\n    \"postalCode\": \"80138\",\n    \"country\": {\n        \"countryCode\": \"us\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/cities/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cities",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Cities",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cities/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cities",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find One City",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cities/:countryCode/:postalCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cities",
+										":countryCode",
+										":postalCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "us"
+										},
+										{
+											"key": "postalCode",
+											"value": "80138"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update City",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Parker\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/cities/:countryCode/:postalCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cities",
+										":countryCode",
+										":postalCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "us"
+										},
+										{
+											"key": "postalCode",
+											"value": "80138"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete City",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cities/:countryCode/:postalCode",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cities",
+										":countryCode",
+										":postalCode"
+									],
+									"variable": [
+										{
+											"key": "countryCode",
+											"value": "us"
+										},
+										{
+											"key": "postalCode",
+											"value": "80138"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Event",
+					"item": [
+						{
+							"name": "Create Event",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Test\",\n    \"venueId\": {\n        \"venueId\": 2\n    },\n    \"start\": \"2018-02-15T17:30:00.000+00:00\",\n    \"end\": \"2018-02-15T19:30:00.000+00:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/events/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"events",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Events",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/events",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"events"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find One Event",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/events/:eventId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"events",
+										":eventId"
+									],
+									"variable": [
+										{
+											"key": "eventId",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Event",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Updated\",\n    \"venueId\": \"2\",\n    \"start\": \"2018-02-16T17:30:00.000+00:00\",\n    \"end\": \"2018-02-16T19:30:00.000+00:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/events/:eventId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"events",
+										":eventId"
+									],
+									"variable": [
+										{
+											"key": "eventId",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Event",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/events/:eventId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"events",
+										":eventId"
+									],
+									"variable": [
+										{
+											"key": "eventId",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Venue",
+					"item": [
+						{
+							"name": "Create Venue",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"streetAddress\": \"123 test address\",\n    \"type\": \"public \",\n    \"city\": {\n        \"postalCode\": \"97206\",\n        \"country\": {\n            \"countryCode\": \"us\"\n        }\n    },\n    \"active\": true,\n    \"name\": \"Test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/venues/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"venues",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Venues",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/venues/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"venues",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find One Venue",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/venues/:venueId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"venues",
+										":venueId"
+									],
+									"variable": [
+										{
+											"key": "venueId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Venue",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"streetAddress\": \"1234 test address\",\n    \"type\": \"public \",\n    \"city\": {\n        \"postalCode\": \"97206\",\n        \"country\": {\n            \"countryCode\": \"us\"\n        }\n    },\n    \"active\": true,\n    \"name\": \"Updated\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/venues/:venueId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"venues",
+										":venueId"
+									],
+									"variable": [
+										{
+											"key": "venueId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Venue",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/venues/:venueId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"venues",
+										":venueId"
+									],
+									"variable": [
+										{
+											"key": "venueId",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
